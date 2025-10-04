@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: clinical_trials
+    description: "Auto-generated DBT model for clinical_trials"
+    columns:
+      - name: Trial_ID
+        description: "Primary key for trial"
+        tests:
+          - not_null
+      - name: Protocol_Number
+        description: "Auto-generated column"
+        tests:
+          - not_null
+      - name: Study_Title
+        description: "Ensure UTF-8 encoding"
+        tests:
+          - not_null
+      - name: Site_ID
+        description: "Composite PK with Trial_ID"
+        tests:
+          - not_null
+      - name: Subject_Count
+        description: "Cross-check with target enrollment"
+        tests:
+          - not_null
+      - name: Enrollment_Target
+        description: "Auto-generated column"
+        tests:
+          - not_null
