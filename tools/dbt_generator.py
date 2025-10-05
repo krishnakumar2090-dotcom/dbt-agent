@@ -70,4 +70,4 @@ def generate_dbt_from_excel(file_path: str, output_dir: str = "dbt_models") -> s
     with open(schema_path, "w") as f:
         f.write(schema_content)
 
-    return f"Generated: {sql_path}, {schema_path}"
+    return f"\nGenerated: {sql_path}, {schema_path}"

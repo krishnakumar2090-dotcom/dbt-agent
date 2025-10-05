@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from langchain.agents import Tool, AgentExecutor, create_react_agent
 from langchain.prompts import PromptTemplate
 from langchain_openai import AzureChatOpenAI
+from langchain.agents.agent_types import AgentType
 from tools.dbt_generator import generate_dbt_from_excel
 
 def main():
